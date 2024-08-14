@@ -1,4 +1,6 @@
-echo installing nginx and adding the expense.conf file along with start and enabling the nginx
+
+
+echo -e "\e[32minstalling nginx and adding the expense.conf file along with start and enabling the nginx\e[0m"
 dnf install nginx -y && cp expense.conf /etc/nginx/default.d/expense.conf && systemctl start nginx && systemctl enable nginx
 
 echo removing the original nginx content
@@ -16,3 +18,4 @@ systemctl restart nginx
 
 
 echo -e "\e[32mFrontend installed successfully\e[0m"
+
