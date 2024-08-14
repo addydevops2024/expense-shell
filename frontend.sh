@@ -13,3 +13,6 @@ unzip /tmp/frontend.zip
 
 echo restarting nginx
 systemctl restart nginx
+
+
+echo -e "\e[32mFrontend installed successfully\e[0m"
