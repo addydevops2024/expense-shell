@@ -1,4 +1,4 @@
-source common.sh
+source ./common.sh
 
 if [ $# -ne 1 ]; then
   echo "Input missing for the password"
