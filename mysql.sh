@@ -3,7 +3,7 @@ if [ $# -ne 1 ]; then
 exit 1
 fi
 
-dnf install mysql-server -y
+dnf install mysql-server -y &>> /tmp/roboshop.log
 if [ $? -eq 0 ]; then
 
   echo "mysql server installed successfully"
@@ -12,7 +12,7 @@ if [ $? -eq 0 ]; then
     exit 2
 
 fi
-systemctl enable mysqld
+systemctl enable mysqld &>> /tmp/roboshop.log
 
 if [ $? -eq 0 ]; then
 
@@ -22,7 +22,7 @@ if [ $? -eq 0 ]; then
     exit 2
 
 fi
-systemctl start mysqld
+systemctl start mysqld &>> /tmp/roboshop.log
 
 if [ $? -eq 0 ]; then
 
